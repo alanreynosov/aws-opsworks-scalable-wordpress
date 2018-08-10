@@ -6,7 +6,7 @@
 
 
 package 'httpd';
-yum_package 'epel-release' do
+rpm_package 'epel-release' do
 	action :install
 	source "https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
 end
