@@ -6,8 +6,13 @@
 
 
 package 'httpd';
-package 'epel-release';
+yum_package 'epel-release' do
+	action :install
+	source "https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
+end
+
 package 'yum-utils';
+
 rpm_package 'remi-release-7' do 
 	action :install
 	source "http://rpms.remirepo.net/enterprise/remi-release-7.rpm"
