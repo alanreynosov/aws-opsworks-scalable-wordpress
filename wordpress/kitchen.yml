@@ -1,0 +1,16 @@
+---
+driver:
+  name: vagrant
+  network:
+    - ["forwarded_port", {guest: 80, host: 8081} ]
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: amazon-2017.03
+
+suites:
+  - name: default
+    run_list: recipe[wordpress::default]
+    attributes:
