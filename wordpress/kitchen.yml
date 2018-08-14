@@ -8,9 +8,9 @@ provisioner:
   name: chef_zero
 
 platforms:
-  - name: amazon-2017.03
+  - name: centos-7
 
 suites:
   - name: default
-    run_list: recipe[wordpress::default]
+    run_list: recipe[wordpress::install_fresh_wordpress]
     attributes:
