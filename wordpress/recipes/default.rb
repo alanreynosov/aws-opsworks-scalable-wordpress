@@ -25,7 +25,7 @@ bash 'enable-php72-repo' do
     EOH
 end
 
-package 'mysql';
+package 'mariadb';
 package 'php';
 package 'php-common';
 package 'php-opcache';
